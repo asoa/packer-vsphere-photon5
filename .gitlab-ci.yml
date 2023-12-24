@@ -14,6 +14,7 @@ test:
     - ls -l /usr/local/bin
     - which packer
     - packer version
+    - packer init
     # - /usr/local/bin/packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
 # test:
