@@ -9,6 +9,7 @@ test:
     - base
   script:
     - which packer
+    - packer version
     # - echo $PATH
     # - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
     # - echo $PATH
