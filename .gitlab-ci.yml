@@ -8,7 +8,7 @@ test:
   tags: 
     - base
   script:
-    - env
+    - ls /usr/local/bin | grep packer
 
 # init:
 #   stage: init
