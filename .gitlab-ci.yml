@@ -1,5 +1,6 @@
 stages:
   - test
+  - init
   - build
 
 test:
@@ -8,6 +9,13 @@ test:
     - base
   script:
     - packer version
+
+init:
+  stage: init
+  tags: 
+    - base
+  script:
+    - packer init .
 
 build:
   stage: build
