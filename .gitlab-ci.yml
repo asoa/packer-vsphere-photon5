@@ -8,10 +8,10 @@ test:
   tags:
     - base
   script:
-    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-    - echo $PATH
+    # - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    # - echo $PATH
     - which packer
-    - packer version
+    - /usr/local/bin/packer version
     # - ls -l /usr/local/bin
     # - which packer
     # - packer version
