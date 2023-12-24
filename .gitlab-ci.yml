@@ -8,7 +8,7 @@ test:
   tags:
     - base
   before_script:
-    - export 'PATH=$PATH:/usr/local/bin/packer'
+    - export PATH=$PATH:/usr/local/bin/packer
   script:
     - packer version
     - packer init photon5.pkr.hcl
