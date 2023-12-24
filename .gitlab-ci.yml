@@ -7,6 +7,8 @@ test:
   stage: test
   tags:
     - base
+  before_script:
+    - export "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
   script:
     - ls -l /usr/local/bin
     - echo $PATH
