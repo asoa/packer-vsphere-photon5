@@ -6,14 +6,14 @@ stages:
 test:
   stage: test
   tags: 
-    - base
+    - docker
   script:
     - packer version
 
 init:
   stage: init
   tags: 
-    - base
+    - docker
   script:
     - packer init .
 
