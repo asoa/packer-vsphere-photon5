@@ -9,7 +9,7 @@ test:
   tags: 
     - docker
   script:
-    - packer version
+    - packer --version
 
 # init:
 #   stage: init
