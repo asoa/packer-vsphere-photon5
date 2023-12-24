@@ -7,7 +7,6 @@ test:
   stage: test
   tags: 
     - docker
-  image: hashicorp/packer:
   script:
     - /usr/local/bin/packer version
 
