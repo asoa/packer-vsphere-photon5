@@ -1,26 +1,27 @@
 stages:
   - test
   - init
-  - build
+  - validate
 
 test:
   stage: test
   tags: 
     - docker
+  image: hashicorp/packer:
   script:
-    - packer version
+    - /usr/local/bin/packer version
 
 init:
   stage: init
   tags: 
     - docker
   script:
-    - packer init .
+    - /usr/local/bin/packer init .
 
 build:
-  stage: build
+  stage: validate
   tags: 
-    - base
+    - docker
   script:
     - packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
