@@ -10,10 +10,7 @@ test:
   script:
     - which packer
     - /usr/local/bin/packer version
-    # - ls -l /usr/local/bin
-    # - which packer
-    # - packer version
-    # - packer init photon5.pkr.hcl
+    - /usr/local/bin/packer init photon5.pkr.hcl
     # - /usr/local/bin/packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
 # test:
