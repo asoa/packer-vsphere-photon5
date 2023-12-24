@@ -8,7 +8,7 @@ test:
   tags: 
     - base
   script:
-    - which packer
+    - env
 
 # init:
 #   stage: init
