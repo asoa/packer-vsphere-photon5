@@ -5,7 +5,11 @@ stages:
 
 test:
   stage: test
-  image: hashicorp/packer:1.10
+  image: 
+    name: hashicorp/packer:1.10
+    entrypoint:
+    - '/usr/bin/env'
+    - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
   tags: 
     - docker
   script:
