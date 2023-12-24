@@ -1,0 +1,18 @@
+stages:
+  - test
+
+test:
+  stage: test
+  tags:
+    - base
+  script:
+    - packer version
+
+# build:
+#   stage: build
+#   image: hashicorp/packer:light
+#   script:
+#     - packer build -var-file=variables.json packer.json
+#   only:
+#     - master
+
