@@ -7,7 +7,8 @@
 
 # ISO Settings
 os_iso_file                     = "photon-5.0-dde71ec57.x86_64.iso"
-os_iso_path                     = "os/photon/5"
+os_iso_path                     = "photon"
+os_iso_datastore                = "nfs"
 
 # OS Meta Data
 vm_os_family                    = "Linux"
@@ -42,3 +43,32 @@ script_files                    = [ "scripts/updates.sh",
                                     "scripts/motd.sh",
                                     "scripts/cleanup.sh" ]
 inline_cmds                     = []
+
+# vSphere Settings
+
+vcenter_username        = "your_vcenter_username"
+vcenter_password        = "your_vcenter_password"
+admin_password          = "your_admin_password"
+build_username          = "your_build_username"
+build_password          = "your_build_password"
+// build_ansible_user      = "your_build_ansible_user"
+// build_ansible_key       = "your_build_ansible_key"
+// rhsm_user               = "your_rhsm_user"
+// rhsm_pass               = "your_rhsm_pass"
+vcenter_server          = "your_vcenter_server"
+vcenter_datacenter      = "your_vcenter_datacenter"
+vcenter_cluster         = "your_vcenter_cluster"
+vcenter_folder          = "your_vcenter_folder"
+vcenter_datastore       = "your_vcenter_datastore"
+vcenter_network         = "your_vcenter_network"
+os_iso_datastore        = "your_os_iso_datastore"
+os_iso_path             = "your_os_iso_path"
+os_iso_file             = "your_os_iso_file"
+vm_os_family            = "your_vm_os_family"
+vm_os_vendor            = "your_vm_os_vendor"
+vm_os_version           = "your_vm_os_version"
+vm_guestos_type         = "your_vm_guestos_type"
+// build_repo              = "your_build_repo"
+// build_branch            = "your_build_branch"
+// build_pkiserver         = "your_build_pkiserver"
+
