@@ -8,7 +8,7 @@ test:
   tags: 
     - base
   script:
-    - packer version
+    - /usr/local/bin/packer version
 
 init:
   stage: init
