@@ -1,18 +1,10 @@
 stages:
   - test
 
-test:
-  stage: test
-  tags:
+build:
+  stage: build
+  tags: 
     - base
   script:
-    - packer version
-
-# build:
-#   stage: build
-#   image: hashicorp/packer:light
-#   script:
-#     - packer build -var-file=variables.json packer.json
-#   only:
-#     - master
+    - packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
