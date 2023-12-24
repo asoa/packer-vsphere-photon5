@@ -10,7 +10,7 @@ test:
   script:
     - which packer
     - /usr/local/bin/packer version
-    # - echo $PATH
+    - echo $PATH
     # - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
     # - echo $PATH
     # - ls -l /usr/local/bin
