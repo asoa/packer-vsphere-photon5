@@ -8,7 +8,7 @@ test:
   tags:
     - base
   before_script:
-    - packer --version
+    - /usr/local/bin/packer --version
   script:
     - /usr/local/bin/packer init photon5.pkr.hcl
     # - /usr/local/bin/packer validate --var-file=definitions.pkr.hcl photon5.pkr.hcl
