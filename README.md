@@ -32,5 +32,10 @@ Used code from the following blobs / github repos to create this packer build:
 - [ ] add STIG validation to packer scripts
 - [ ] add integration test to validate template
 - [ ] create script to install vscode cli 
-- [ ] install other packages (e.g. vim, git, etc.)
+- [x] install other packages (e.g. vim, git, etc.)
+- [ ] add cronie (cron) to template and configure crontab
+
+## Troubleshooting
+- Problem: packer build hangs on "Waiting for IP
+    - Solution: disable and re-enable network adapter in vsphere
 

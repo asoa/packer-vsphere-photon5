@@ -26,5 +26,5 @@ cleanup:
 	@echo "Restoring original template: $(TEMPLATE)" to prepare for next build
 	scripts/makefile_scripts/restore_template.sh
 
-main: validate build cleanup
+main: validate replace_tokens build cleanup
 
