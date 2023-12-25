@@ -1,5 +1,5 @@
 {
-    "hostname": "v12n-photon4",
+    "hostname": "${vm_name}",
     "password":
         {
             "crypted": false,
