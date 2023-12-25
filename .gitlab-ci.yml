@@ -31,6 +31,6 @@ build:
     - packer init photon5.pkr.hcl
     - scripts/makefile_scripts/replace_tokens.sh photon5.auto.pkrvars.hcl
   script:
-    - echo photon5.auto.pkrvars.hcl
+    - cat photon5.auto.pkrvars.hcl
     # - packer build --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
