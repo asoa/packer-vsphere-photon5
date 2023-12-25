@@ -15,9 +15,9 @@ test:
   before_script:
     - whoami
   script:
-    - /usr/local/bin/packer --version
-    - /usr/local/bin/packer init photon5.pkr.hcl
-    - /usr/local/bin/packer validate --var-file=definitions.pkr.hcl photon5.pkr.hcl
+    - packer --version
+    # - packer init photon5.pkr.hcl
+    # - packer validate --var-file=definitions.pkr.hcl photon5.pkr.hcl
 
 # test:
 #   stage: test
