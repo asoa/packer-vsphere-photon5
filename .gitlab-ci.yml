@@ -27,8 +27,8 @@ build:
     entrypoint:
       - '/usr/bin/env'
       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-  before_script:
-    - packer init photon5.pkr.hcl
+  # before_script:
+  #   - packer init photon5.pkr.hcl
   script:
     - packer build --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 

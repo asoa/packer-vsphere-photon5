@@ -39,7 +39,6 @@ vm_guestos_type                 = "vmwarePhoton64Guest"
 # Provisioner Settings
 script_files                    = [ "scripts/updates.sh",
                                     "scripts/sshd.sh",
-                                    "scripts/pki.sh",
                                     "scripts/motd.sh",
                                     "scripts/cleanup.sh" ]
 inline_cmds                     = []
@@ -54,7 +53,7 @@ build_password          = "TRongassword11!!"
 vcenter_server          = "192.168.4.205"
 vcenter_datacenter      = "Datacenter"
 vcenter_cluster         = "GEN 8 Cluster"
-vcenter_folder          = "tempates"
+vcenter_folder          = "templates"
 vcenter_datastore       = "nfs"
 vcenter_network         = "ds_vm"
 
