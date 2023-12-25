@@ -376,7 +376,8 @@ source "vsphere-iso" "photon5" {
 
     # Virtual Machine
     guest_os_type               = var.vm_guestos_type
-    vm_name                     = "${ source.name }-${ var.build_branch }"
+    // vm_name                     = "${ source.name }-${ var.build_branch }"
+    vm_name                     = "${ source.name }"
     notes                       = local.vm_description
     firmware                    = var.vm_firmware
     CPUs                        = var.vm_cpu_sockets
