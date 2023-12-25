@@ -428,7 +428,7 @@ source "vsphere-iso" "photon5-1225" {
 # -------------------------------------------------------------------------- #
 build {
     # Build sources
-    sources                     = [ "source.vsphere-iso.photon5" ]
+    sources                     = [ "source.vsphere-iso.photon5-1225" ]
     
     # Shell Provisioner to execute scripts
     provisioner "shell" {
