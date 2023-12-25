@@ -6,3 +6,6 @@
 echo ' - Updating the guest operating system ...'
 tdnf upgrade tdnf -y --refresh &>/dev/null
 tdnf distro-sync -y &>/dev/null
+
+# install software
+tdnf install git docker-compose -y &>/dev/null 
