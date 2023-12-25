@@ -357,6 +357,7 @@ source "vsphere-iso" "photon5" {
     cluster                     = var.vcenter_cluster
     folder                      = var.vcenter_folder
     datastore                   = var.vcenter_datastore
+    name                        = "foobar"
 
     # Content Library and Template Settings
     convert_to_template         = var.vcenter_convert_template
