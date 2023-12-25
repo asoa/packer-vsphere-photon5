@@ -28,7 +28,6 @@ vm_disk_thin                    = true
 vm_cdrom_type                   = "sata"
 
 # VM Settings
-vm_name                         = ${{ env.PKR_VAR_VM_NAME }}
 vm_cdrom_remove                 = true
 vcenter_convert_template        = false
 vcenter_content_library_ovf     = true
