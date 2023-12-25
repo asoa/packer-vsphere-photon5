@@ -2,6 +2,10 @@ stages:
   - validate
   - build
 
+default:
+  before_script:
+    - packer init photon5.pkr.hcl
+
 validate:
   stage: validate
   tags: 
@@ -10,7 +14,7 @@ validate:
     name: hashicorp/packer:1.10
     entrypoint:
       - '/usr/bin/env'
-      - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+      - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'    
   script:
     - packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
