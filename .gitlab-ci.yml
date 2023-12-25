@@ -6,12 +6,14 @@ stages:
 test:
   stage: test
   tags:
-    - base
+    - docker
+  image: hashicorp/packer:1.10
+    entrypoint:
+      - '/usr/bin/env'
+      - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
   before_script:
     - whoami
   script:
-    - ls -l /usr/local/bin
-    - echo $PATH
     - /usr/local/bin/packer --version
     - /usr/local/bin/packer init photon5.pkr.hcl
     - /usr/local/bin/packer validate --var-file=definitions.pkr.hcl photon5.pkr.hcl
