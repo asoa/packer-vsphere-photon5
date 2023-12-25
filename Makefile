@@ -14,6 +14,10 @@ validate:
 	@echo "Validating template: $(TEMPLATE)"
 	packer validate --var-file=$(VAR_FILE) $(TEMPLATE)	
 
+replace_tokens:
+	@echo "Replacing tokens in template: $(TEMPLATE)"
+	scripts/makefile_scripts/replace_tokens.sh
+
 build:
 	@echo "Building template: $(TEMPLATE)"
 	packer build --var-file=$(VAR_FILE) $(TEMPLATE)

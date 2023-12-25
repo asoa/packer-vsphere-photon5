@@ -1,9 +1,5 @@
-# ----------------------------------------------------------------------------
-# Name:         photon5.auto.pkrvars.hcl
-# Description:  Required vSphere variables for Photon 4 Packer builds
-# Author:       Michael Poore (@mpoore)
-# URL:          https://github.com/v12n-io/packer
-# ----------------------------------------------------------------------------
+# modified template from here: https://blog.v12n.io/creating-vsphere-vm-templates-with-packer-part-1/
+# https://github.com/mpoore/packer-vsphere-photon5
 
 vm_name                         = "photon-6bd19b"
 # ISO Settings

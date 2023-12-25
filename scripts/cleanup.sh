@@ -7,5 +7,3 @@ source .env
 ## Final cleanup actions
 echo ' - Executing final cleanup tasks ...'
 echo -n > /etc/machine-id
-
-mv $path_to_var_file.bak $path_to_var_file

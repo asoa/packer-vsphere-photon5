@@ -2,4 +2,6 @@
 
 source .env
 
-mv $path_to_var_file.bak $path_to_var_file
+mv ${BASE_PATH}/${gitlab_path_to_var_file}.bak ${BASE_PATH}/${gitlab_path_to_var_file}
+# echo ${BASE_PATH}/${gitlab_path_to_var_file}.bak 
+# echo ${BASE_PATH}/${gitlab_path_to_var_file}
