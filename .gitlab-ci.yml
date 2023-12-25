@@ -17,7 +17,7 @@ test:
   script:
     - packer --version
     - packer init photon5.pkr.hcl
-    - packer validate --var-file=definitions.pkr.hcl photon5.pkr.hcl
+    - packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
 # test:
 #   stage: test
