@@ -29,7 +29,8 @@ build:
       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
   before_script:
     - packer init photon5.pkr.hcl
-    - scripts/makefile_scripts/replace_tokens.sh photon5.pkr.hcl
+    - scripts/makefile_scripts/replace_tokens.sh photon5.auto.pkrvars.hcl
   script:
-    - packer build --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
+    - echo photon5.auto.pkrvars.hcl
+    # - packer build --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
