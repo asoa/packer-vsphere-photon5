@@ -14,7 +14,6 @@ cat << EOF > /etc/issue
    {_{__    {__  {__       {__  {__
     {__    {____{________ {___  {__
         
-        version :   $BUILDVERSION
         updated :   $UPDATED
 
 EOF

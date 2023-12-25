@@ -41,20 +41,21 @@ vm_guestos_type                 = "vmwarePhoton64Guest"
 # Provisioner Settings
 script_files                    = [ "scripts/updates.sh",
                                     "scripts/sshd.sh",
+                                    "scripts/motd",
                                     "scripts/cleanup.sh" ]
 inline_cmds                     = []
 
 # vSphere Settings
-vcenter_username        = "administrator@vsphere.mylocal"
-vcenter_password        = "TRongassword11!!"
-admin_password          = "TRongassword11!!"
-build_username          = "administrator"
-build_password          = "TRongassword11!!"
-vcenter_server          = "192.168.4.205"
-vcenter_datacenter      = "Datacenter"
-vcenter_cluster         = "GEN 8 Cluster"
-vcenter_folder          = "templates"
-vcenter_datastore       = "nfs"
-vcenter_network         = "ds_vm"
+vcenter_username        = "#{vcenter_username}#"
+vcenter_password        = "#{vcenter_password}#"
+admin_password          = "#{admin_password}#"
+build_username          = "#{build_username}#"
+build_password          = "#{build_password}#"
+vcenter_server          = "#{vcenter_server}#"
+vcenter_datacenter      = "#{vcenter_datacenter}#"
+vcenter_cluster         = "#{vcenter_cluster}#"
+vcenter_folder          = "#{vcenter_folder}#"
+vcenter_datastore       = "#{vcenter_datastore}#"
+vcenter_network         = "#{vcenter_network}#"
 
 

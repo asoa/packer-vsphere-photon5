@@ -40,26 +40,6 @@ variable "build_password" {
     description = "Password for the non-administrative user"
     sensitive   = true
 }
-// variable "build_ansible_user" {
-//     type        = string
-//     description = "Name of the user to be used by Ansible"
-//     sensitive   = true
-// }
-// variable "build_ansible_key" {
-//     type        = string
-//     description = "SSH key for the Ansible user"
-//     sensitive   = true
-// }
-// variable "rhsm_user" {
-//     type        = string
-//     description = "RedHat Subscription Manager username"
-//     sensitive   = true
-// }
-// variable "rhsm_pass" {
-//     type        = string
-//     description = "RedHat Subscription Manager password"
-//     sensitive   = true
-// }
 
 # vCenter Configuration
 variable "vcenter_server" {
@@ -298,20 +278,6 @@ variable "inline_cmds" {
     default     = []
 }
 
-# Build Settings
-// variable "build_repo" {
-//     type        = string
-//     description = "Source control respository this build comes from"
-// }
-// variable "build_branch" {
-//     type        = string
-//     description = "Branch of the source control respository this build comes from"
-// }
-// variable "build_pkiserver" {
-//     type        = string
-//     description = "URL for acquiring SSL certificates"
-// }
-
 # ----------------------------------------------------------------------------
 # Name:         photon5.pkr.hcl
 # Description:  Build definition for Photon 5
@@ -434,10 +400,6 @@ build {
     provisioner "shell" {
         execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
         scripts             = var.script_files
-        // environment_vars    = [ "PKISERVER=${ var.build_pkiserver }",
-        //                         "BUILDVERSION=${ local.build_version }",
-        //                         "BUILDREPO=${ var.build_repo }",
-        //                         "BUILDBRANCH=${ var.build_branch }" ]
         environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
     }
 
@@ -448,9 +410,6 @@ build {
             vcenter_fqdn    = var.vcenter_server
             vcenter_folder  = var.vcenter_folder
             iso_file        = var.os_iso_file
-            // build_repo      = var.build_repo
-            // build_branch    = var.build_branch
-            // build_version   = local.build_version
         }
     }
 }
