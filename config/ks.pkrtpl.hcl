@@ -1,4 +1,5 @@
 {
+    "vm_name": "photon-6bd19b"
     "hostname": "${vm_name}",
     "password":
         {
