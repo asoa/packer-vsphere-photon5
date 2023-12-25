@@ -15,7 +15,6 @@ cat << EOF > /etc/issue
     {__    {____{________ {___  {__
         
         version :   $BUILDVERSION
-        source  :   $BUILDREPO ($BUILDBRANCH)
         updated :   $UPDATED
 
 EOF
