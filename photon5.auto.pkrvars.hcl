@@ -5,6 +5,8 @@
 # URL:          https://github.com/v12n-io/packer
 # ----------------------------------------------------------------------------
 
+vm_name                         = "photon-6bd19b"
+
 # ISO Settings
 os_iso_file                     = "photon-5.0-dde71ec57.x86_64.iso"
 os_iso_path                     = "photon"
@@ -44,7 +46,6 @@ script_files                    = [ "scripts/updates.sh",
 inline_cmds                     = []
 
 # vSphere Settings
-
 vcenter_username        = "administrator@vsphere.mylocal"
 vcenter_password        = "TRongassword11!!"
 admin_password          = "TRongassword11!!"
