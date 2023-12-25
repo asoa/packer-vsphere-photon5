@@ -343,6 +343,7 @@ locals {
                                         build_password            = var.build_password
                                         admin_username            = var.admin_username
                                         admin_password            = var.admin_password
+                                        vm_name                   = var.vm_name
                                     })
                                   }
     vm_description              = "VER: ${ local.build_version }\nISO: ${ var.os_iso_file }"
