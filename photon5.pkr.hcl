@@ -318,7 +318,7 @@ locals {
 # -------------------------------------------------------------------------- #
 #                       Template Source Definitions                          #
 # -------------------------------------------------------------------------- #
-source "vsphere-iso" "photon5-1225" {
+source "vsphere-iso" "photon5" {
     # vCenter
     vcenter_server              = var.vcenter_server
     username                    = var.vcenter_username
@@ -394,7 +394,7 @@ source "vsphere-iso" "photon5-1225" {
 # -------------------------------------------------------------------------- #
 build {
     # Build sources
-    sources                     = [ "source.vsphere-iso.photon5-1225" ]
+    sources                     = [ "source.vsphere-iso.photon5" ]
     
     # Shell Provisioner to execute scripts
     provisioner "shell" {

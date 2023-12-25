@@ -41,7 +41,7 @@ vm_guestos_type                 = "vmwarePhoton64Guest"
 # Provisioner Settings
 script_files                    = [ "scripts/updates.sh",
                                     "scripts/sshd.sh",
-                                    "scripts/motd",
+                                    "scripts/motd.sh",
                                     "scripts/cleanup.sh" ]
 inline_cmds                     = []
 
