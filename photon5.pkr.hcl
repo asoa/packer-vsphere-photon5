@@ -433,9 +433,7 @@ build {
         //                         "BUILDVERSION=${ local.build_version }",
         //                         "BUILDREPO=${ var.build_repo }",
         //                         "BUILDBRANCH=${ var.build_branch }" ]
-        environment_vars    = [ "BUILDVERSION=${ local.build_version }",
-                                "BUILDREPO=${ var.build_repo }",
-                                "BUILDBRANCH=${ var.build_branch }" ]
+        environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
     }
 
     post-processor "manifest" {
