@@ -21,4 +21,6 @@ Used code from the following github repos to create this packer build:
 ## TODO
 - [ ] add STIG validation to packer scripts
 - [ ] add integration test to validate template
+- [ ] create script to install vscode cli 
+- [ ] install other packages (e.g. vim, git, etc.)
 
