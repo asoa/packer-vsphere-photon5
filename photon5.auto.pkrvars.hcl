@@ -46,16 +46,16 @@ inline_cmds                     = []
 
 # vSphere Settings
 
-vcenter_username        = "your_vcenter_username"
-vcenter_password        = "your_vcenter_password"
-admin_password          = "your_admin_password"
-build_username          = "your_build_username"
-build_password          = "your_build_password"
-vcenter_server          = "your_vcenter_server"
-vcenter_datacenter      = "your_vcenter_datacenter"
-vcenter_cluster         = "your_vcenter_cluster"
-vcenter_folder          = "your_vcenter_folder"
-vcenter_datastore       = "your_vcenter_datastore"
-vcenter_network         = "your_vcenter_network"
+vcenter_username        = "administrator@vsphere.mylocal"
+vcenter_password        = "TRongassword11!!"
+admin_password          = "TRongassword11!!"
+build_username          = "administrator"
+build_password          = "TRongassword11!!"
+vcenter_server          = "192.168.4.205"
+vcenter_datacenter      = "Datacenter"
+vcenter_cluster         = "GEN 8 Cluster"
+vcenter_folder          = "tempates"
+vcenter_datastore       = "nfs"
+vcenter_network         = "ds_vm"
 
 
