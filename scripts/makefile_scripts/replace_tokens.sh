@@ -18,4 +18,6 @@ function replace() {
   sed -i "s|#{vcenter_network}#|$vcenter_network|g" $1
 }
 
-replace "../../photon5.auto.pkrvars.hcl"
+pwd 
+ls -l
+# replace "../../photon5.auto.pkrvars.hcl"
