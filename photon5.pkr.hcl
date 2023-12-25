@@ -429,8 +429,11 @@ build {
     provisioner "shell" {
         execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
         scripts             = var.script_files
-        environment_vars    = [ "PKISERVER=${ var.build_pkiserver }",
-                                "BUILDVERSION=${ local.build_version }",
+        // environment_vars    = [ "PKISERVER=${ var.build_pkiserver }",
+        //                         "BUILDVERSION=${ local.build_version }",
+        //                         "BUILDREPO=${ var.build_repo }",
+        //                         "BUILDBRANCH=${ var.build_branch }" ]
+        environment_vars    = [ "BUILDVERSION=${ local.build_version }",
                                 "BUILDREPO=${ var.build_repo }",
                                 "BUILDBRANCH=${ var.build_branch }" ]
     }
