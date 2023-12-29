@@ -9,6 +9,11 @@
 #                           Variable Definitions                             #
 # -------------------------------------------------------------------------- #
 # Sensitive Variables
+variable "vm_name" {
+    type        = string
+    description = "Name of the VM to be created"
+    sensitive   = true
+}
 variable "vcenter_username" {
     type        = string
     description = "Username used by Packer to connect to vCenter"
