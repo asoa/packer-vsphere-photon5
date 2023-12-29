@@ -18,4 +18,11 @@ function replace() {
   sed -i "s|#{vcenter_network}#|$gitlab_vcenter_network|g" $1
 }
 
-replace photon5.auto.pkrvars.hcl
+function set_vm_name() {
+  sed -i "s|#{vm_name}#|$vm_name|g" $1
+}
+
+main () {
+  replace photon5.auto.pkrvars.hcl
+  set_vm_name photon5.auto.pkrvars.hcl
+}

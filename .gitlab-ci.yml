@@ -18,27 +18,27 @@ validate:
   script:
     - packer validate --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
 
-build:
-  stage: build
-  tags: 
-    - docker
-  image:
-    name: hashicorp/packer:1.10
-    entrypoint:
-      - '/usr/bin/env'
-      - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
-  before_script:
-    - packer init photon5.pkr.hcl
-    - sed -i "s|#{vcenter_username}#|$gitlab_vcenter_username|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_password}#|$gitlab_vcenter_password|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{admin_password}#|$gitlab_admin_password|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{build_username}#|$gitlab_build_username|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{build_password}#|$gitlab_build_password|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_server}#|$gitlab_vcenter_server|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_datacenter}#|$gitlab_vcenter_datacenter|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_cluster}#|$gitlab_vcenter_cluster|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_folder}#|$gitlab_vcenter_folder|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_datastore}#|$gitlab_vcenter_datastore|g" photon5.auto.pkrvars.hcl
-    - sed -i "s|#{vcenter_network}#|$gitlab_vcenter_network|g" photon5.auto.pkrvars.hcl
-  script:
-    - packer build --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl
+# build:
+#   stage: build
+#   tags: 
+#     - docker
+#   image:
+#     name: hashicorp/packer:1.10
+#     entrypoint:
+#       - '/usr/bin/env'
+#       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+#   before_script:
+#     - packer init photon5.pkr.hcl
+#     - sed -i "s|#{vcenter_username}#|$gitlab_vcenter_username|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_password}#|$gitlab_vcenter_password|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{admin_password}#|$gitlab_admin_password|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{build_username}#|$gitlab_build_username|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{build_password}#|$gitlab_build_password|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_server}#|$gitlab_vcenter_server|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_datacenter}#|$gitlab_vcenter_datacenter|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_cluster}#|$gitlab_vcenter_cluster|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_folder}#|$gitlab_vcenter_folder|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_datastore}#|$gitlab_vcenter_datastore|g" photon5.auto.pkrvars.hcl
+#     - sed -i "s|#{vcenter_network}#|$gitlab_vcenter_network|g" photon5.auto.pkrvars.hcl
+#   script:
+#     - packer build --var-file=photon5.auto.pkrvars.hcl photon5.pkr.hcl

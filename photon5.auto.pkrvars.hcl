@@ -1,7 +1,7 @@
 # modified template from here: https://blog.v12n.io/creating-vsphere-vm-templates-with-packer-part-1/
 # https://github.com/mpoore/packer-vsphere-photon5
 
-vm_name                         = "photon-6bd19b"
+vm_name                         = "#{vm_name}#"
 # ISO Settings
 os_iso_file                     = "photon-5.0-dde71ec57.x86_64.iso"
 os_iso_path                     = "photon"
