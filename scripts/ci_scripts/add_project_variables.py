@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import requests
@@ -19,14 +19,16 @@ def create_variables():
   """
   creates gitlab project variables from environment variables
   """
+  print('Creating project variables')
   for key, value in os.environ.items():
     if str(key).startswith("gitlab"):
       r = requests.post(url, headers=headers, data={"key": key, "value": value}, verify=False)
       if r.status_code == 201:
         print(f"Successfully added {key} to project variables")
+      elif r.status_code == 400:
+        print(f"{key} already exists in project variables")
       else:
-        print(f"Failed to add {key} to project variables")
+        print(f"{r.status_code}: Failed to add {key} to project variables")
       
 if __name__ == "__main__":
   create_variables()
-
