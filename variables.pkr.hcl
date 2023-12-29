@@ -1,14 +1,3 @@
-# ----------------------------------------------------------------------------
-# Name:         definitions.pkr.hcl
-# Description:  Variable definitions for vSphere Packer builds
-# Author:       Michael Poore (@mpoore)
-# URL:          https://github.com/v12n-io/packer
-# ----------------------------------------------------------------------------
-
-# -------------------------------------------------------------------------- #
-#                           Variable Definitions                             #
-# -------------------------------------------------------------------------- #
-# Sensitive Variables
 variable "vm_name" {
     type        = string
     description = "Name of the VM to be created"
