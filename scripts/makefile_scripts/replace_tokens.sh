@@ -16,13 +16,13 @@ function replace() {
   sed -i "s|#{vcenter_folder}#|$gitlab_vcenter_folder|g" $1
   sed -i "s|#{vcenter_datastore}#|$gitlab_vcenter_datastore|g" $1
   sed -i "s|#{vcenter_network}#|$gitlab_vcenter_network|g" $1
+  sed -i "s|#{vm_name}#|$vm_name|g" $1
+  sed -i "s|#{vcenter_content_library}#|$vcenter_content_library|g" $1
 }
 
-function set_vm_name() {
-  sed -i "s|#{vm_name}#|$vm_name|g" $1
-}
 
 main () {
   replace photon5.auto.pkrvars.hcl
-  set_vm_name photon5.auto.pkrvars.hcl
 }
+
+main "$@"

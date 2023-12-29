@@ -8,7 +8,7 @@ tdnf upgrade tdnf -y --refresh &>/dev/null
 tdnf distro-sync -y &>/dev/null
 
 # install software
-tdnf install git docker-compose -y &>/dev/null
+tdnf install git docker-compose vim -y &>/dev/null
 
 # download vscode cli 
 # curl -sSL https://raw.githubusercontent.com/microsoft/vscode-dev-containers/master/script-library/common-alpine.sh | bash -s -- install
