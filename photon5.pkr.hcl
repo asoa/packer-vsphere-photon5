@@ -114,7 +114,7 @@ source "vsphere-iso" "#{vm_name}#" {
 # -------------------------------------------------------------------------- #
 build {
     # Build sources
-    sources                     = [ "source.vsphere-iso.photon5" ]
+    sources                     = [ "source.vsphere-iso.#{vm_name}#" ]
     
     # Shell Provisioner to execute scripts
     provisioner "shell" {
