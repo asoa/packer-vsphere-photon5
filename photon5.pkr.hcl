@@ -38,7 +38,7 @@ locals {
 # -------------------------------------------------------------------------- #
 #                       Template Source Definitions                          #
 # -------------------------------------------------------------------------- #
-source "vsphere-iso" "photon5" {
+source "vsphere-iso" "${var.vm_name}" {
     # vCenter
     vcenter_server              = var.vcenter_server
     username                    = var.vcenter_username
