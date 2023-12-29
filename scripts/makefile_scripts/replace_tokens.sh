@@ -2,7 +2,7 @@
 
 source .env
 
-function replace() {
+function replace_vars() {
   # create backup of file before replacing
   cp $1 $1.bak
   sed -i "s|#{vcenter_username}#|$gitlab_vcenter_username|g" $1
@@ -20,9 +20,15 @@ function replace() {
   sed -i "s|#{vcenter_content_library}#|$gitlab_vcenter_content_library|g" $1
 }
 
+function replace_template() {
+  cp $1 $1.bak
+  sed -i "s|#{vm_name}#|$vm_name|g" $1
+}
+
 
 main () {
-  replace photon5.auto.pkrvars.hcl
+  replace_vars photon5.auto.pkrvars.hcl
+  replace_template photon5.pkr.hcl
 }
 
 main "$@"

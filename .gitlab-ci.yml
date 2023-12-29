@@ -41,6 +41,7 @@ build:
       sed -i "s|#{vcenter_datastore}#|$gitlab_vcenter_datastore|g" photon5.auto.pkrvars.hcl
       sed -i "s|#{vcenter_network}#|$gitlab_vcenter_network|g" photon5.auto.pkrvars.hcl
       sed -i "s|#{vm_name}#|$vm_name|g" photon5.auto.pkrvars.hcl
+      sed -i "s|#{vm_name}#|$vm_name|g" photon5.pkr.hcl
       sed -i "s|#{vcenter_content_library}#|$vcenter_content_library|g" photon5.auto.pkrvars.hcl
       packer init photon5.pkr.hcl
   script:
