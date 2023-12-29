@@ -50,22 +50,11 @@ variable "build_ansible_user" {
     description = "Name of the user to be used by Ansible"
     sensitive   = true
 }
-variable "build_ansible_key" {
-    type        = string
-    description = "SSH key for the Ansible user"
-    sensitive   = true
-}
-variable "rhsm_user" {
-    type        = string
-    description = "RedHat Subscription Manager username"
-    sensitive   = true
-}
-variable "rhsm_pass" {
-    type        = string
-    description = "RedHat Subscription Manager password"
-    sensitive   = true
-}
-
+// variable "build_ansible_key" {
+//     type        = string
+//     description = "SSH key for the Ansible user"
+//     sensitive   = true
+// }
 # vCenter Configuration
 variable "vcenter_server" {
     type        = string
@@ -297,18 +286,4 @@ variable "inline_cmds" {
     type        = list(string)
     description = "List of OS commands to execute"
     default     = []
-}
-
-# Build Settings
-variable "build_repo" {
-    type        = string
-    description = "Source control respository this build comes from"
-}
-variable "build_branch" {
-    type        = string
-    description = "Branch of the source control respository this build comes from"
-}
-variable "build_pkiserver" {
-    type        = string
-    description = "URL for acquiring SSL certificates"
 }
