@@ -13,6 +13,7 @@ validate:
       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'    
   before_script:
       - sed -i "s|#{vm_name}#|$gitlab_vm_name|g" photon5.pkr.hcl
+      - cat photon5.pkr.hcl
       - packer init photon5.pkr.hcl
   script:
     - packer validate --var-file=photon5.auto.pkrvars.hcl .
