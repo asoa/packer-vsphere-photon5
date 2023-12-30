@@ -8,4 +8,6 @@
 # echo "Hostname: $hostname"
 # echo "IP Address: $ip_address"
 
-ansible-playbook -i localhost -u root ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./asible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
+pwd
+ls -al
+# ansible-playbook -i localhost -u root ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./asible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
