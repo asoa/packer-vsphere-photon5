@@ -2,6 +2,11 @@
 # https://github.com/mpoore/packer-vsphere-photon5
 
 vm_name                         = "#{vm_name}#"
+build_ansible_user              = "#{build_ansible_user}#"
+build_ansible_key               = "#{build_ansible_key}#"
+admin_password                  = "#{admin_password}#"
+build_username                  = "#{build_username}#"
+build_password                  = "#{build_password}#"
 # ISO Settings
 os_iso_file                     = "photon-5.0-dde71ec57.x86_64.iso"
 os_iso_path                     = "photon"
@@ -44,9 +49,6 @@ inline_cmds                     = []
 # vSphere Settings
 vcenter_username        = "#{vcenter_username}#"
 vcenter_password        = "#{vcenter_password}#"
-admin_password          = "#{admin_password}#"
-build_username          = "#{build_username}#"
-build_password          = "#{build_password}#"
 vcenter_server          = "#{vcenter_server}#"
 vcenter_datacenter      = "#{vcenter_datacenter}#"
 vcenter_cluster         = "#{vcenter_cluster}#"

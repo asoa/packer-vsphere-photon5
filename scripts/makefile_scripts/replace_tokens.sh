@@ -18,6 +18,10 @@ function replace_vars() {
   sed -i "s|#{vcenter_network}#|$gitlab_vcenter_network|g" $1
   sed -i "s|#{vm_name}#|$vm_name|g" $1
   sed -i "s|#{vcenter_content_library}#|$gitlab_vcenter_content_library|g" $1
+  # build_ansible_user
+  sed -i "s|#{build_ansible_user}#|$gitlab_build_ansible_user|g" $1
+  # build_ansible_key
+  sed -i "s|#{build_ansible_key}#|$gitlab_build_ansible_key|g" $1
 }
 
 function replace_template() {
