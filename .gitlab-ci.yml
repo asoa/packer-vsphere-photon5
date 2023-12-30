@@ -15,10 +15,11 @@ validate:
       # use sed to replace the vm_name variable in the photon5.pkr.hcl
       - sed -i "s|#{vm_name}#|$gitlab_vm_name|g" photon5.pkr.hcl
       - pwd
+      - ls -la
       # - packer init photon5.pkr.hcl
   script:
     # - packer validate --var-file=photon5.auto.pkrvars.hcl .
-    - ./scrips/stig.sh
+    - ./scripts/stig.sh
 
 # build:
 #   stage: build
