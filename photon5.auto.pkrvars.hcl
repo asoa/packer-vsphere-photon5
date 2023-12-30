@@ -43,6 +43,7 @@ vm_guestos_type                 = "vmwarePhoton64Guest"
 script_files                    = [ "scripts/updates.sh",
                                     "scripts/sshd.sh",
                                     "scripts/motd.sh",
+                                    "scripts/stig.sh",
                                     "scripts/cleanup.sh" ]
 inline_cmds                     = []
 
