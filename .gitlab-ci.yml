@@ -43,6 +43,7 @@ build:
       sed -i "s|#{vm_name}#|$gitlab_vm_name|g" photon5.auto.pkrvars.hcl
       sed -i "s|#{vm_name}#|$gitlab_vm_name|g" photon5.pkr.hcl
       sed -i "s|#{vcenter_content_library}#|$gitlab_vcenter_content_library|g" photon5.auto.pkrvars.hcl
+      sed -i "s|#{gitlab_access_token}#|$gitlab_access_token|g" photon5.auto.pkrvars.hcl
       packer init photon5.pkr.hcl
   script:
     - packer build --var-file=photon5.auto.pkrvars.hcl .

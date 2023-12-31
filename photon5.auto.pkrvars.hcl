@@ -7,6 +7,7 @@ build_ansible_key               = "#{build_ansible_key}#"
 admin_password                  = "#{admin_password}#"
 build_username                  = "#{build_username}#"
 build_password                  = "#{build_password}#"
+gitlab_access_token             = "#{gitlab_access_token}#"
 # ISO Settings
 os_iso_file                     = "photon-5.0-dde71ec57.x86_64.iso"
 os_iso_path                     = "photon"
@@ -43,6 +44,7 @@ vm_guestos_type                 = "vmwarePhoton64Guest"
 script_files                    = [ "scripts/updates.sh",
                                     "scripts/sshd.sh",
                                     "scripts/motd.sh",
+                                    "scripts/enable_cloud_init.sh",
                                     "scripts/cleanup.sh" ]
 ansible_playbook                = [ "scripts/stig.sh" ]
 inline_cmds                     = []

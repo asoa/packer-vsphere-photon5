@@ -9,10 +9,14 @@
 #                           Variable Definitions                             #
 # -------------------------------------------------------------------------- #
 # Sensitive Variables
+variable "gitlab_access_token" {
+    type        = string
+    description = "GitLab access token for the Packer project"
+    sensitive   = true
+}
 variable "vm_name" {
     type        = string
     description = "Name of the VM to be created"
-    sensitive   = true
 }
 variable "vcenter_username" {
     type        = string

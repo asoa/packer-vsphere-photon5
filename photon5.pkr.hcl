@@ -123,12 +123,12 @@ build {
         environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
     }
 
-    // # run ansibile playbook
-    // provisioner "shell" {
-    //     execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
-    //     script              = var.ansible_playbook
-    //     environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
-    // }
+    # run ansibile playbook
+    provisioner "shell" {
+        execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
+        script              = var.ansible_playbook
+        environment_vars    = [ "GITLAB_TOKEN=${ var.gitlab_access_token }" ]
+    }
 
     post-processor "manifest" {
         output              = "manifest.txt"
