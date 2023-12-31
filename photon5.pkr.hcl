@@ -123,6 +123,13 @@ build {
         environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
     }
 
+    // # run ansibile playbook
+    // provisioner "shell" {
+    //     execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
+    //     script              = var.ansible_playbook
+    //     environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
+    // }
+
     post-processor "manifest" {
         output              = "manifest.txt"
         strip_path          = true

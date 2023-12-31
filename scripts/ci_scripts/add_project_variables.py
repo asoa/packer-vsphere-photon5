@@ -4,7 +4,6 @@ import os
 import requests
 from dotenv import load_dotenv
 
-print()
 gitlab_hostname = os.getenv("gitlab_hostname")
 project_id = os.getenv("gitlab_project_id")
 api_string = f"api/v4/projects/{project_id}/variables"
