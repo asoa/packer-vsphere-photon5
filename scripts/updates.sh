@@ -9,6 +9,5 @@ tdnf distro-sync -y &>/dev/null
 
 # install software
 tdnf install git docker-compose vim ansible bindutils -y &>/dev/null
-ansible-galaxy collection install community.general
 # download vscode cli 
 # curl -sSL https://raw.githubusercontent.com/microsoft/vscode-dev-containers/master/script-library/common-alpine.sh | bash -s -- install
