@@ -6,6 +6,7 @@ echo ' - Enabling cloud-init ...'
 hostname="myphoton5-$(openssl rand -hex 3)"
 
 cat <<EOF > /etc/cloud/cloud.cfg.d/cloud-init.cfg
+#cloud-config
 hostname: ${hostname}
 
 ssh_authorized_keys:
