@@ -9,7 +9,6 @@ echo "gitlab token: $GITLAB_TOKEN"
 echo "gitlab hostname: $hostname"
 # install ansible community.general collection
 ansible-galaxy collection install community.general
-
 # clone the repo
 git config --global user.name foo 
 git config --global user.email bar@domain.local
