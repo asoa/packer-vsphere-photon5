@@ -286,6 +286,11 @@ variable "script_files" {
     description = "List of OS scripts to execute"
     default     = []
 }
+variable "ansible_playbooks" {
+    type        = list(string)
+    description = "List of ansible playbooks to execute"
+    default     = []
+}
 variable "inline_cmds" {
     type        = list(string)
     description = "List of OS commands to execute"

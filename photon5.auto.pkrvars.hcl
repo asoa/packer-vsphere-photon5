@@ -46,7 +46,7 @@ script_files                    = [ "scripts/updates.sh",
                                     "scripts/motd.sh",
                                     "scripts/enable_cloud_init.sh",
                                     "scripts/cleanup.sh" ]
-ansible_playbook                = [ "scripts/stig.sh" ]
+ansible_playbooks                = [ "scripts/stig.sh" ]
 inline_cmds                     = []
 
 # vSphere Settings

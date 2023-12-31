@@ -126,7 +126,7 @@ build {
     # run ansibile playbook
     provisioner "shell" {
         execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
-        script              = var.ansible_playbook
+        script              = var.ansible_playbooks
         environment_vars    = [ "GITLAB_TOKEN=${ var.gitlab_access_token }" ]
     }
 
