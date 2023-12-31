@@ -127,7 +127,7 @@ build {
     provisioner "shell" {
         execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
         scripts             = var.ansible_playbooks
-        environment_vars    = [ "GITLAB_TOKEN=${ var.gitlab_access_token }" ]
+        environment_vars    = [ "GITLAB_TOKEN=${ var.gitlab_access_token }", "gitlab_hostname=gitlab", "gitlab_domain_name=lab.mylocal" ]
     }
 
     post-processor "manifest" {

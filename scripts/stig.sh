@@ -2,7 +2,7 @@
 
 # TODO: the vsphere stig package is available via package manager
 
-hostname="$gitlab_hostname.$gitlab_domain_name"
+hostname="${gitlab_hostname}.${gitlab_domain_name}"
 ip_address=$(nslookup $hostname | awk '/^Address: / { print $2 }')
 
 echo "gitlab token: $GITLAB_TOKEN"
