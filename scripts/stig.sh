@@ -20,4 +20,4 @@ git init
 git remote add origin https://root:${GITLAB_TOKEN}@${ip_address}/g6/photon_build.git
 git pull origin main
 # TODO: configure playbook for localhost
-ansible-playbook ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./asible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
+# ansible-playbook ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./ansible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
