@@ -11,7 +11,8 @@ git config --global user.email bar@domain.local
 git config --global init.defaultBranch main
 git config --global http.sslVerify false
 # TODO: change ip_address to hostname once gitlab FQDN is resolvable
-git remote add origin https://${gitlab_access_token}@${ip_address}/g6/photon_build.git
+git init
+git remote add origin https://root:${gitlab_access_token}@${ip_address}/g6/photon_build.git
 git pull origin main
 # TODO: configure playbook for localhost
-ansible-playbook -u root ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./asible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
+ansible-playbook ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./asible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
