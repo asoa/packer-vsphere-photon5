@@ -58,5 +58,3 @@ vcenter_cluster         = "#{vcenter_cluster}#"
 vcenter_folder          = "#{vcenter_folder}#"
 vcenter_datastore       = "#{vcenter_datastore}#"
 vcenter_network         = "#{vcenter_network}#"
-
-
