@@ -9,6 +9,7 @@ echo "gitlab token: $GITLAB_TOKEN"
 echo "gitlab hostname: $hostname"
 # install ansible community.general collection
 ansible-galaxy collection install community.general
+ansible-galaxy collection install ansible.posix
 # clone the repo
 git config --global user.name foo 
 git config --global user.email bar@domain.local
@@ -18,5 +19,4 @@ git config --global http.sslVerify false
 git init
 git remote add origin https://root:${GITLAB_TOKEN}@${ip_address}/g6/photon_build.git
 git pull origin main
-# TODO: configure playbook for localhost
-# ansible-playbook ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -k -v --extra-vars @./ansible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml
+ansible-playbook ./ansible/vmware-photon-5.0-stig-ansible-hardening/playbook.yml -v --extra-vars @./ansible/vmware-photon-5.0-stig-ansible-hardening/vars-example.yml

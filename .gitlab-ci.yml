@@ -12,7 +12,6 @@ validate:
       - '/usr/bin/env'
       - 'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'    
   before_script:
-      # use sed to replace the vm_name variable in the photon5.pkr.hcl
       - sed -i "s|#{vm_name}#|$gitlab_vm_name|g" photon5.pkr.hcl
       - packer init photon5.pkr.hcl
   script:
