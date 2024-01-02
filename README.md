@@ -31,13 +31,13 @@ Used code from the following blobs / github repos to create this packer build:
 ## TODO
 - [ ] add ansible STIG configuration to packer scripts
 - [ ] add chef STIG validation to packer scripts
-- [ ] add ansible STIG configuration to gitlab-ci tasks
+- [x] add ansible STIG configuration to gitlab-ci tasks
 - [ ] add chef STIG validation to gitlab-ci tasks
 - [ ] add integration test to validate template
 - [ ] create script to install vscode cli 
 - [x] install other packages (e.g. vim, git, etc.)
 - [ ] add cronie (cron) to template and configure crontab
-- [ ] BUG: docker will not start after applying ansible playbook (STIGS) due to modprobe.conf
+- [x] BUG: docker will not start after applying ansible playbook (STIGS) due to modprobe.conf
 
 ## Troubleshooting
 - Problem: packer build hangs on "Waiting for IP
