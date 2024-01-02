@@ -120,7 +120,7 @@ build {
     provisioner "shell" {
         execute_command     = "echo '${ var.build_password }' | {{.Vars}} sudo -E -S sh -eu '{{.Path}}'"
         scripts             = var.script_files
-        environment_vars    = [ "BUILDVERSION=${ local.build_version }"]
+        environment_vars    = [ "BUILDVERSION=${ local.build_version }", "vm_name=${ var.vm_name }"]
     }
 
     # run ansibile playbook

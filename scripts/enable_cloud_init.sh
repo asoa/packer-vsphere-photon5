@@ -4,7 +4,8 @@
 # https://cloudinit.readthedocs.io/en/latest/topics/examples.html#yaml-examples
 echo ' - Enabling cloud-init ...'
 iid="iid-$(openssl rand -hex 3)"
-hostname="myphoton5-$(openssl rand -hex 3)"
+# hostname="myphoton5-$(openssl rand -hex 3)"
+hostname=$vm_name # vm_name is set from calling packer shell provisioner
 
 mkdir -p /var/lib/cloud/seed/nocloud
 cat <<EOF > /var/lib/cloud/seed/nocloud/user-data
