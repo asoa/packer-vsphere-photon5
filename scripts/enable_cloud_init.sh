@@ -8,7 +8,7 @@ iid="iid-$(openssl rand -hex 3)"
 hostname=$vm_name # vm_name is set from calling packer shell provisioner
 
 mkdir -p /var/lib/cloud/seed/nocloud
-cat <<EOF > /var/lib/cloud/seed/nocloud/user-data
+cat <<EOF > /var/lib/cloud/seed/nocloud/meta-data
 instance-id: $iid
 local-hostname: $hostname
 EOF
