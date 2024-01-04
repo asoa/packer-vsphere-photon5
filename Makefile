@@ -4,15 +4,15 @@ include .env
 export
 
 # Define variables
-TEMPLATE = $$path_to_template
-VAR_FILE = $$path_to_var_file
+TEMPLATE = $$gitlab_path_to_template
+VAR_FILE = $$gitlab_path_to_var_file
 
 # Define targets
 .PHONY: validate build
 
 validate:
 	@echo "Validating template: $(TEMPLATE)"
-	packer validate --var-file=$(VAR_FILE) $(TEMPLATE)	
+	packer validate --var-file=$(VAR_FILE) .
 
 replace_tokens:
 	@echo "Replacing tokens in template: $(TEMPLATE)"
@@ -20,7 +20,7 @@ replace_tokens:
 
 build:
 	@echo "Building template: $(TEMPLATE)"
-	packer build --var-file=$(VAR_FILE) $(TEMPLATE)
+	packer build --var-file=$(VAR_FILE) .
 
 cleanup:
 	@echo "Restoring original template: $(TEMPLATE)" to prepare for next build

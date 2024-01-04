@@ -29,7 +29,7 @@ Used code from the following blobs / github repos to create this packer build:
 1. push code to gitlab repository -> .gitlab-ci.yml will run packer build
 
 ## TODO
-- [ ] add ansible STIG configuration to packer scripts
+- [x] add ansible STIG configuration to packer scripts
 - [ ] add chef STIG validation to packer scripts
 - [x] add ansible STIG configuration to gitlab-ci tasks
 - [ ] add chef STIG validation to gitlab-ci tasks
@@ -42,4 +42,6 @@ Used code from the following blobs / github repos to create this packer build:
 ## Troubleshooting
 - Problem: packer build hangs on "Waiting for IP
     - Solution: disable and re-enable network adapter in vsphere
+- Problem: docker.service will not start due to modprobe.conf
+    - Solution: remove `install bridge /bin/false` from /etc/modprobe.d/ and reboot
 
